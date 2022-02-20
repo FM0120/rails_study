@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   get 'top' => 'homes#top'
   post 'todolists' => 'todolists#create'
   get 'todolists' => 'todolists#index'
-  kkk
+  get 'todolists/:id' => 'todolists#show',as: 'todolist'
+  # # as: '名前' は「名前付きルート」といい、
+  # コード内でURLをわかりやすく書くために使われます。
 end
